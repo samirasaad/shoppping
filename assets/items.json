@@ -1,0 +1,18 @@
+[{
+    "id":1,
+    "name":"item one",
+    "isDeleted":"false",
+    "isOpened":"false"
+},
+{
+    "id":2,
+    "name":"item two",
+    "isDeleted":"false",
+    "isOpened":"false"
+},
+{
+    "id":3,
+    "name":"item three",
+    "isDeleted":"false",
+    "isOpened":"false"
+}]
