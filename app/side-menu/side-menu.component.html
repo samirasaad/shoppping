@@ -6,6 +6,11 @@
    <a [routerLink]="['deleted-items']"> deleted</a>
   </li>
   <li>
-    <a [routerLink]="['category']">category</a>
+    category
+    <ul> 
+        <li *ngFor="let category of categoryList" 
+        ><a 
+        [routerLink]="['category',{name:category}]" >{{category}}</a></li>
+      </ul>
   </li>
 </ul>

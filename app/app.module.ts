@@ -15,6 +15,9 @@ import { SideMenuComponent } from './side-menu/side-menu.component';
 import { ControllerComponent } from './controller/controller.component';
 import { CategoryComponent } from './category/category.component';
 
+// services 
+import { ConfigService } from './config.service';
+
 // routing
 const routes:Routes=[
   {
@@ -27,7 +30,11 @@ const routes:Routes=[
   },
   {
     path:"category",
-   component:CategoryComponent
+   component:CategoryComponent,
+    children:[{
+      path:":title",
+      component:CategoryComponent,
+    }]
   }
 ]
 @NgModule({
@@ -47,7 +54,7 @@ const routes:Routes=[
     RouterModule.forRoot(routes),
     HttpClientModule
   ],
-  providers: [],
+  providers: [ConfigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

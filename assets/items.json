@@ -1,18 +1,28 @@
 [{
-    "id":1,
+    "id":0,
     "name":"item one",
-    "isDeleted":"false",
-    "isOpened":"false"
+    "isDeleted":false,
+    "isOpened":false,
+    "category":"food"
+},
+{
+    "id":1,
+    "name":"item two",
+    "isDeleted":false,
+    "isOpened":false,
+    "category":"toys"
 },
 {
     "id":2,
-    "name":"item two",
-    "isDeleted":"false",
-    "isOpened":"false"
+    "name":"item three",
+    "isDeleted":false,
+    "isOpened":false,
+    "category":"toys"    
 },
 {
     "id":3,
-    "name":"item three",
-    "isDeleted":"false",
-    "isOpened":"false"
+    "name":"item four",
+    "isDeleted":false,
+    "isOpened":false,
+    "category":"entertainment"    
 }]

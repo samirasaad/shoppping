@@ -1,5 +1,11 @@
-<div class="card">
-    <div class="card-body">
-      This is some text within a card body.
-    </div>
+<div class="card my-2" *ngFor="let item of items" (click)="toggleItemDetails(item.id)"  [ngClass]="{'deletedItem':item.isDeleted === true}">
+  <p class="py-3">{{item.name}}</p>
+  <!-- <input type="checkbox" name="" id="" [disabled]='item.isDeleted'> -->
+  <span (click)="deleteItem(item.id, $event)"> delete</span>
+  <div class="card-body" *ngIf="item.isOpened">
+      {{item.isOpened}}<br>
+      {{item.isDeleted}}<br>
+      {{item.id}}<br>
+      {{item.category}}
   </div>
+</div>

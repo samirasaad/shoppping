@@ -1,20 +1,13 @@
-import { Component } from '@angular/core';
-import { ConfigService } from './config.service'
+import { Component ,OnInit} from '@angular/core';
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
   title = 'shopping';
-  public items:Array<object>=[];
-  constructor(private config: ConfigService) { }
+  constructor() { }
 
   ngOnInit() {
-    // this.config.getItems().subscribe(res=>{
-    //   this.items=res;
-    //   console.log( this.items);
-    // })
   }
-
 }
