@@ -1,8 +1,8 @@
 // modules
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
 import { HttpClientModule }    from '@angular/common/http';
+import { RoutingModule }  from './routing/routing.module';
 
 // components
 import { AppComponent } from './app.component';
@@ -18,25 +18,7 @@ import { CategoryComponent } from './category/category.component';
 // services 
 import { ConfigService } from './config.service';
 
-// routing
-const routes:Routes=[
-  {
-    path: "" ,
-   component:ActiveItemsComponent
-  }
-  , {
-    path:"deleted-items",
-   component:DeletedItemsComponent
-  },
-  {
-    path:"category",
-   component:CategoryComponent,
-    children:[{
-      path:":title",
-      component:CategoryComponent,
-    }]
-  }
-]
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -51,9 +33,9 @@ const routes:Routes=[
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot(routes),
-    HttpClientModule
-  ],
+    HttpClientModule,
+    RoutingModule
+    ],
   providers: [ConfigService],
   bootstrap: [AppComponent]
 })
